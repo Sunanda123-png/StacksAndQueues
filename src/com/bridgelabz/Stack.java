@@ -1,6 +1,8 @@
 package com.bridgelabz;
 import com.bridgelabz.com.bridgelabz.com.bridgelabz.Node;
 
+import java.util.EmptyStackException;
+
 /**
  * author:- Sunanda Shil
  * @param <t>
@@ -12,6 +14,28 @@ public class Stack<t> {
         Node tempdata = new Node(data);
         tempdata.next = Top;
         Top = tempdata;
+
+    }
+    //For checking the peek element
+    public  void peek(){
+        if (Top==null){
+            System.out.println("Stack is empty");
+        }
+        else{
+            System.out.println(Top.data);
+        }
+
+    }
+    public void pop(){
+        while(Top!=null)
+        {
+            if (Top==null){
+                System.out.println("Stack is empty");
+            }
+            else{
+                Top=Top.next;
+            }
+        }
 
     }
 //for triversing
