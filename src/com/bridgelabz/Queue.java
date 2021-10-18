@@ -14,4 +14,12 @@ public class Queue<t> {
             rear=rear.next;
         }
     }
+    public t dequeue(){
+        if(front!=null){
+            t result=front.data;
+            front=front.next;
+            return result;
+        }
+        return null;
+    }
 }
